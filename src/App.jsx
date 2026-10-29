@@ -79,10 +79,7 @@ export default function App() {
         )}
         {bagOpen && (
           <BagDrawer
-            lang={lang}
-            t={t}
             cart={cart}
-            setCart={setCart}
             onClose={() => setBagOpen(false)}
           />
         )}

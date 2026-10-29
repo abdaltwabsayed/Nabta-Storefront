@@ -1,5 +1,9 @@
+import { useContext } from "react";
+import { AppContext } from "../../App";
+import Icon from "../Icon";
 
-export default function BagDrawer({ lang, t, cart, setCart, onClose }) {
+export default function BagDrawer({ cart, onClose }) {
+  const {t, lang, setCart} = useContext(AppContext);
   const isArabic = lang === "ar";
   const items = Object.values(cart);
   const subtotal = items.reduce(
