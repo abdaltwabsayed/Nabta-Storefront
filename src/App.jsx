@@ -24,7 +24,16 @@ export default function App() {
   useEffect(() => {
     document.documentElement.lang = lang;
     document.documentElement.dir = isArabic ? "rtl" : "ltr";
-  }, [lang, isArabic]);
+    document.title = t.metaTitle;
+    document.querySelector('meta[name="description"]').content =
+      t.metaDescription;
+    document.querySelector('meta[property="og:title"]').content = t.metaTitle;
+    document.querySelector('meta[property="og:description"]').content =
+      t.metaDescription;
+    document.querySelector('meta[name="twitter:title"]').content = t.metaTitle;
+    document.querySelector('meta[name="twitter:description"]').content =
+      t.metaDescription;
+  }, [lang, isArabic, t]);
   useEffect(() => {
     if (!toast) return undefined;
     const timer = window.setTimeout(() => setToast(""), 2400);

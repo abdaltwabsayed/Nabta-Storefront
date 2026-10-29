@@ -1,6 +1,9 @@
 export 
 const copy = {
   en: {
+    metaTitle: "Nabta | Indoor Plants & Thoughtful Plant Care",
+    metaDescription:
+      "Thoughtfully chosen indoor plants to bring calm, color, and a little more life into your everyday.",
     announcement: "A little green goes a long way. Free delivery over $60.",
     navShop: "Shop plants",
     navCare: "Plant care",
@@ -66,6 +69,9 @@ const copy = {
     emptyHelp: "Try a different search or category.",
   },
   ar: {
+    metaTitle: "نبتة | نباتات منزلية مختارة بعناية",
+    metaDescription:
+      "نباتات منزلية مختارة بعناية لتضيف الهدوء واللون والحياة إلى يومك.",
     announcement:
       "القليل من الخضرة يصنع فرقًا كبيرًا. توصيل مجاني للطلبات فوق ٦٠ دولارًا.",
     navShop: "تسوّق النباتات",
