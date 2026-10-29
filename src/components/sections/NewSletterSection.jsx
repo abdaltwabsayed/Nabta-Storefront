@@ -1,8 +1,21 @@
-import React, { useContext } from "react";
+import { useContext, useState } from "react";
 import { AppContext } from "../../App";
+import Icon from "../icon";
 
 export default function NewSletterSection() {
-    const {newsletterMessage, setNewsletterMessage} = useContext(AppContext);
+  const {t} = useContext(AppContext);
+  const [email, setEmail] = useState("");
+  const [newsletterMessage, setNewsletterMessage] = useState("");
+  
+  const submitNewsletter = (event) => {
+    event.preventDefault();
+    if (!/^\S+@\S+\.\S+$/.test(email.trim())) {
+      setNewsletterMessage(t.emailInvalid);
+      return;
+    }
+    setNewsletterMessage(t.subscribed);
+    setEmail("");
+  };
   return (
     <section className="newsletter-section" id="newsletter">
       <div className="newsletter-inner">

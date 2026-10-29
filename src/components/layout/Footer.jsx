@@ -1,6 +1,7 @@
+import Icon from "../icon";
 
 
-export default function Footer() {
+export default function Footer({ t }) {
   return (
     <footer className="site-footer" id="story">
         <div className="footer-top">

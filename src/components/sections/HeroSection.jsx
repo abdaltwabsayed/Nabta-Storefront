@@ -1,6 +1,10 @@
-import heroPlantsImage from "./assets/hero-plants.jpg";
+import { useContext } from "react";
+import heroPlantsImage from "../../assets/hero-plants.jpg";
+import { AppContext } from "../../App";
+import Icon from "../icon";
 
 export default function HeroSection() {
+  const {t} = useContext(AppContext);
   return (
     <section className="hero-section">
       <div className="hero-content">

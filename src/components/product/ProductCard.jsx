@@ -1,3 +1,4 @@
+import Icon from "../icon";
 
 export default function ProductCard({ product, lang, t, onAdd, isFavorite, onFavorite }) {
   const isArabic = lang === "ar";

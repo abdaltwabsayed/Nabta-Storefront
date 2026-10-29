@@ -1,5 +1,6 @@
+import Icon from "../icon";
 
-export default function Header() {
+export default function Header({t, setLang, setBagOpen, isArabic, cart}) {
     
     const cartCount = Object.values(cart).reduce(
     (sum, item) => sum + item.quantity,
