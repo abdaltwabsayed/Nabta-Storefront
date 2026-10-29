@@ -1,4 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
+import monsteraImage from './assets/monstera.jpg';
+import snakePlantImage from './assets/snake-plant.jpg';
+import oliveTreeImage from './assets/olive-tree.jpg';
+import pileaImage from './assets/pilea.jpg';
+import zzPlantImage from './assets/zz-plant.jpg';
+import birdOfParadiseImage from './assets/bird-of-paradise.jpg';
+import heroPlantsImage from './assets/hero-plants.jpg';
+import plantCareImage from './assets/plant-care.jpg';
 
 const iconPaths = {
   search: <><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4 4"/></>,
@@ -20,27 +28,27 @@ function Icon({ name, size = 20, fill = 'none', strokeWidth = 1.7, className = '
 const products = [
   {
     id: 1, name: 'Monstera Deliciosa', arName: 'مونستيرا دليسيوسا', category: 'easy', price: 38, oldPrice: 46, size: 'Medium · 35–45 cm', arSize: 'متوسطة · ٣٥–٤٥ سم', tag: 'BESTSELLER', arTag: 'الأكثر مبيعًا', tagType: 'sage',
-    image: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=85', alt: 'Lush green monstera leaves in a pot',
+    image: monsteraImage, alt: 'Lush green monstera leaves in a pot',
   },
   {
     id: 2, name: 'Snake Plant', arName: 'نبات جلد النمر', category: 'low', price: 26, oldPrice: null, size: 'Small · 25–35 cm', arSize: 'صغيرة · ٢٥–٣٥ سم', tag: 'LOW MAINTENANCE', arTag: 'عناية سهلة', tagType: 'sand',
-    image: 'https://images.unsplash.com/photo-1593482892290-f54927ae2b7b?auto=format&fit=crop&w=900&q=85', alt: 'Tall snake plant in a simple planter',
+    image: snakePlantImage, alt: 'Tall snake plant in a simple planter',
   },
   {
     id: 3, name: 'Olive Tree', arName: 'شجرة الزيتون', category: 'pet', price: 54, oldPrice: null, size: 'Large · 60–80 cm', arSize: 'كبيرة · ٦٠–٨٠ سم', tag: 'PET FRIENDLY', arTag: 'مناسبة للحيوانات', tagType: 'sage',
-    image: 'https://images.unsplash.com/photo-1512428813834-c702c7702b78?auto=format&fit=crop&w=900&q=85', alt: 'Small olive tree with silvery green leaves',
+    image: oliveTreeImage, alt: 'Small olive tree with silvery green leaves',
   },
   {
     id: 4, name: 'Pilea Peperomioides', arName: 'بيليا بيبروميويدس', category: 'easy', price: 32, oldPrice: null, size: 'Small · 20–30 cm', arSize: 'صغيرة · ٢٠–٣٠ سم', tag: 'NEW ARRIVAL', arTag: 'وصل حديثًا', tagType: 'peach',
-    image: 'https://images.unsplash.com/photo-1459156212016-c812468e2115?auto=format&fit=crop&w=900&q=85', alt: 'Round-leaf houseplant in a terracotta pot',
+    image: pileaImage, alt: 'Round-leaf houseplant in a terracotta pot',
   },
   {
     id: 5, name: 'ZZ Plant', arName: 'نبات الزاميا', category: 'low', price: 29, oldPrice: null, size: 'Medium · 30–40 cm', arSize: 'متوسطة · ٣٠–٤٠ سم', tag: '', arTag: '', tagType: 'sage',
-    image: 'https://images.unsplash.com/photo-1593691509543-c55fb32e5cee?auto=format&fit=crop&w=900&q=85', alt: 'Glossy green ZZ plant leaves',
+    image: zzPlantImage, alt: 'Glossy green ZZ plant leaves',
   },
   {
     id: 6, name: 'Bird of Paradise', arName: 'عصفور الجنة', category: 'statement', price: 68, oldPrice: null, size: 'Large · 70–90 cm', arSize: 'كبيرة · ٧٠–٩٠ سم', tag: 'STATEMENT PLANT', arTag: 'نبتة مميزة', tagType: 'sand',
-    image: 'https://images.unsplash.com/photo-1597055181300-a8b3be8f4c56?auto=format&fit=crop&w=900&q=85', alt: 'Large tropical bird of paradise plant',
+    image: birdOfParadiseImage, alt: 'Large tropical bird of paradise plant',
   },
 ];
 
@@ -207,7 +215,7 @@ export default function App() {
             <div className="hero-proof"><div className="avatar-stack"><span className="mini-avatar avatar-1">✿</span><span className="mini-avatar avatar-2">✦</span><span className="mini-avatar avatar-3">❋</span></div><div><div className="proof-stars">★★★★★</div><p>{t.heroNote}</p></div></div>
           </div>
           <div className="hero-visual">
-            <div className="hero-image-frame"><img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1400&q=90" alt="Sunlit indoor plants and vibrant green foliage" fetchPriority="high" /></div>
+            <div className="hero-image-frame"><img src={heroPlantsImage} alt="Sunlit indoor plants and vibrant green foliage" fetchPriority="high" /></div>
             <div className="hero-sticker"><span className="sticker-star">✳</span><span>{t.heroBadge}</span></div>
             <div className="image-caption"><span className="caption-dot" /> 01 / BRING THE OUTSIDE IN</div>
             <div className="hero-scribble" aria-hidden="true">growing<br />together</div>
@@ -232,7 +240,7 @@ export default function App() {
         </section>
 
         <section className="care-banner section-wrap" id="care">
-          <div className="care-image"><img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=1100&q=85" alt="A thriving potted plant in a bright home" loading="lazy" /><span className="care-image-label"><Icon name="leaf" size={17} /> A NOTE FROM OUR PLANT PEOPLE</span></div>
+          <div className="care-image"><img src={plantCareImage} alt="A thriving potted plant in a bright home" loading="lazy" /><span className="care-image-label"><Icon name="leaf" size={17} /> A NOTE FROM OUR PLANT PEOPLE</span></div>
           <div className="care-content"><p className="eyebrow"><span className="eyebrow-line" />{t.careEyebrow}</p><h2>{t.careTitle}</h2><p>{t.careDesc}</p><a className="button button-outline" href="#newsletter">{t.careCta}<Icon name="arrow" size={17} /></a><span className="care-decoration" aria-hidden="true">stay<br />rooted.</span></div>
         </section>
 
