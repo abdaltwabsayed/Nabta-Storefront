@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import Icon from "../icon";
+import { AppContext } from "../../App";
 
-export default function BenefitsRow({ t }) {
+export default function BenefitsRow() {
+    const { t } = useContext(AppContext);
   return (
     <section className="benefits-row" aria-label="Shopping benefits">
       <div>

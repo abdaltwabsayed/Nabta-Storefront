@@ -39,26 +39,23 @@ export default function App() {
           {t.announcement}
         </div>
         <Header
-          t={t}
-          setLang={setLang}
           setBagOpen={setBagOpen}
-          isArabic={isArabic}
           cart={cart}
         />
 
         <main id="top">
           <HeroSection />
 
-          <BenefitsRow t={t} />
+          <BenefitsRow />
 
-          <ShopSection t={t} lang={lang} />
+          <ShopSection />
 
-          <CareBanner t={t} />
+          <CareBanner />
 
           <NewSletterSection />
         </main>
 
-        <Footer t={t} />
+        <Footer />
 
         {toast && (
           <div className="toast" role="status">

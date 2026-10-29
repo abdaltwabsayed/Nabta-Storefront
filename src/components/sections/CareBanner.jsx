@@ -1,7 +1,10 @@
 import Icon from "../icon";
 import plantCareImage from "../../assets/plant-care.jpg";
+import { useContext } from "react";
+import { AppContext } from "../../App";
 
-export default function CareBanner({ t }) {
+export default function CareBanner() {
+    const { t } = useContext(AppContext);
   return (
     <section className="care-banner section-wrap" id="care">
       <div className="care-image">

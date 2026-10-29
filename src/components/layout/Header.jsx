@@ -1,7 +1,9 @@
+import { useContext } from "react";
 import Icon from "../icon";
+import { AppContext } from "../../App";
 
-export default function Header({t, setLang, setBagOpen, isArabic, cart}) {
-    
+export default function Header({setBagOpen, cart}) {
+    const {t, setLang, isArabic} = useContext(AppContext);
     const cartCount = Object.values(cart).reduce(
     (sum, item) => sum + item.quantity,
     0,

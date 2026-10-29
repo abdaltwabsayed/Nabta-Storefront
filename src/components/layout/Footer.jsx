@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import Icon from "../icon";
+import { AppContext } from "../../App";
 
 
-export default function Footer({ t }) {
+export default function Footer() {
+  const { t } = useContext(AppContext);
   return (
     <footer className="site-footer" id="story">
         <div className="footer-top">
