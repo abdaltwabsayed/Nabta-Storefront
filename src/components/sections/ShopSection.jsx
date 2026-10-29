@@ -1,6 +1,6 @@
 import { useContext, useMemo, useState } from "react";
 import { products } from "../../data/products";
-import Icon from "../icon";
+import Icon from "../Icon";
 import ProductCard from "../product/ProductCard";
 import { AppContext } from "../../App";
 
@@ -11,7 +11,7 @@ export default function ShopSection() {
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState("featured");
   const [favorites, setFavorites] = useState([]);
-  const { t, lang } = useContext(AppContext);
+  const { t, lang, isArabic, setCart, setToast } = useContext(AppContext);
 
   const visibleProducts = useMemo(() => {
     const normalizedQuery = query.trim().toLocaleLowerCase();

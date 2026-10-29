@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { AppContext } from "../../App";
-import Icon from "../icon";
+import Icon from "../Icon";
 
 export default function NewSletterSection() {
   const {t} = useContext(AppContext);

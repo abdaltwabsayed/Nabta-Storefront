@@ -1,5 +1,5 @@
 
-import {iconPaths} from "../data/iconPaths"
+import { iconPaths } from "../data/iconPaths.jsx";
 
 export default function Icon({
   name,

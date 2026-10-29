@@ -1,14 +1,14 @@
-import { createContext, useEffect, useMemo, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import HeroSection from "./components/sections/HeroSection";
 import BagDrawer from "./components/cart/BagDrawer";
-import Icon from "./components/icon";
 import { copy } from "./data/copy";
 import NewSletterSection from "./components/sections/NewSletterSection";
 import BenefitsRow from "./components/sections/BenefitsRow";
 import ShopSection from "./components/sections/ShopSection";
 import CareBanner from "./components/sections/CareBanner";
+import Icon from "./components/Icon";
 
 
 export const AppContext = createContext(null);
@@ -32,7 +32,7 @@ export default function App() {
   }, [toast]);
 
   return (
-    <AppContext.Provider value={{ lang, setLang, t, isArabic }}>
+    <AppContext.Provider value={{ lang, setLang, t, isArabic, setCart, setToast }}>
       <div className={`site-shell ${isArabic ? "arabic" : ""}`}>
         <div className="announcement-bar">
           <span className="announcement-dot" />

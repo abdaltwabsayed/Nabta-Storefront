@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import heroPlantsImage from "../../assets/hero-plants.jpg";
 import { AppContext } from "../../App";
-import Icon from "../icon";
+import Icon from "../Icon";
 
 export default function HeroSection() {
   const {t} = useContext(AppContext);

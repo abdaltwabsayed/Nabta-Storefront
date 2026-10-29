@@ -1,4 +1,4 @@
-import Icon from "../icon";
+import Icon from "../Icon";
 import plantCareImage from "../../assets/plant-care.jpg";
 import { useContext } from "react";
 import { AppContext } from "../../App";

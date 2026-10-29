@@ -21,6 +21,10 @@ npm run build
 npm run preview
 ```
 
+## Deploy to GitHub Pages
+
+The GitHub Actions workflow builds the Vite app and deploys the generated `dist` folder. In the repository settings, set **Pages > Build and deployment > Source** to **GitHub Actions**. Push to `main` or run the workflow manually from the Actions tab.
+
 ## Features
 
 - Responsive desktop, tablet, and mobile layouts

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import Icon from "../icon";
+import Icon from "../Icon";
 import { AppContext } from "../../App";
 
 export default function Header({setBagOpen, cart}) {
